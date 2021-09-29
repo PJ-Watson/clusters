@@ -4,6 +4,9 @@
 
 Go implementations of several clustering algoritms (k-means++, DBSCAN, OPTICS), as well as utilities for importing data and estimating optimal number of clusters.
 
+This was forked from https://github.com/mpraski/clusters, which no longer appears to be maintained, and includes the fix from https://github.com/okhowang/clusters.
+
+
 ## The reason
 
 This library was built out of necessity for a collection of performant cluster analysis utilities for Golang. Go, thanks to its numerous advantages (single binary distrubution, relative performance, growing community) seems to become an attractive alternative to languages commonly used in statistical computations and machine learning, yet it still lacks crucial tools and libraries. I use the [*floats* package](https://github.com/gonum/gonum/tree/master/floats) from the robust Gonum library to perform optimized vector calculations in tight loops.

@@ -168,9 +168,9 @@ func (c *dbscanClusterer) run() {
 		} else {
 			c.a[i] = n
 
-			log.Println("Length of neighbours")
+			log.Println("Length of neighbours:")
 			log.Println(l)
-			log.Println("Number of neighbours")
+			log.Println("Number of cluster:")
 			log.Println(n)
 			log.Println("")
 
@@ -189,7 +189,7 @@ func (c *dbscanClusterer) run() {
 					}
 				}
 
-				if c.a[ns[j]] == 0 {
+				if c.a[ns[j]] <= 0 {
 					c.a[ns[j]] = n
 					c.b[m]++
 				}

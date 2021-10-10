@@ -163,13 +163,16 @@ func (c *dbscanClusterer) run() {
 
 		c.nearest(i, &l, &ns)
 
-		log.Println(l)
-		log.Println(n)
-
 		if l < c.minpts {
 			c.a[i] = -1
 		} else {
 			c.a[i] = n
+
+			log.Println("Length of neighbours")
+			log.Println(l)
+			log.Println("Number of neighbours")
+			log.Println(n)
+			log.Println("")
 
 			c.b = append(c.b, 0)
 			c.b[m]++

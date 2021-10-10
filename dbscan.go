@@ -2,6 +2,7 @@ package clusters
 
 import (
 	"sync"
+	"log"
 )
 
 type dbscanClusterer struct {
@@ -161,6 +162,9 @@ func (c *dbscanClusterer) run() {
 		c.v[i] = true
 
 		c.nearest(i, &l, &ns)
+
+		log.Println(l)
+		log.Println(n)
 
 		if l < c.minpts {
 			c.a[i] = -1
